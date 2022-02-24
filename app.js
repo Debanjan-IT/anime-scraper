@@ -12,6 +12,9 @@ app.post('/get_data', async (req, res) => {
     const data = await getData(req.body.url)
     res.send(data)
 })
+app.get('/', async (req, res) => {
+    res.send({Text: 'Hello'})
+})
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
